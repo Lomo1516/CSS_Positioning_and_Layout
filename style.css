@@ -1,0 +1,180 @@
+/* CSS PROPERTY ORDERING (OUTSIDE-IN)
+   ------------------------------------------------------------
+   1. POSITIONING : fixed, absolute, top, right, z-index
+   2. BOX MODEL   : display, flex, width, height, margin, padding
+   3. VISUALS     : background, border, border-radius, box-shadow
+   4. TYPOGRAPHY  : font-size, color, text-align, line-height
+   ------------------------------------------------------------
+*/
+
+
+/* ============================================================
+   1. GLOBAL & LAYOUT RESET
+   ============================================================ */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================================
+   2. FIXED TOP HEADER (Red Bar + Blue Nav)
+   ============================================================ */
+header {
+    /* Position */
+    position: fixed;
+    top: 0;
+    left: 14%;
+    z-index: 100;
+    
+    /* Box Model */
+    width: 86%;
+}
+
+header p {
+    /* Box Model */
+    margin: 0;
+    padding: 25px;
+    
+    /* Visuals */
+    background-color: red;
+    
+    /* Typography */
+    font-size: x-large;
+    text-align: center;
+}
+
+header nav {
+    /* Box Model */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    align-items: center;
+    margin: 0;
+    padding: 0; 
+    
+    /* Visuals */
+    background-color: black;
+}
+
+header nav button {
+    /* Box Model */
+    flex: 0 1 200px;
+    margin: 0;
+    padding: 15px 15px;
+    
+    /* Visuals */
+    background-color: blue;
+    border: 2px solid transparent;
+    cursor: pointer;
+    
+    /* Typography */
+    color: white;
+    font-size: 18px;
+}
+
+/* ============================================================
+   3. LEFT SIDEBAR (Jump Menu)
+   ============================================================ */
+#jumpMenu {
+    /* Position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    
+    /* Box Model */
+    width: 14%;
+    height: 100vh;
+    padding-top: 20px;
+    
+    /* Visuals */
+    background-color: rgb(201, 169, 53);
+    
+    /* Typography */
+    text-align: center;
+}
+
+#jumpMenu h2 {
+    /* Box Model */
+    margin-bottom: 30px;
+}
+
+#jumpMenu a {
+    /* Box Model */
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    
+    /* Typography */
+    text-decoration: none;
+    color: black;
+}
+
+/* ============================================================
+   4. MAIN CONTENT AREA (H1 & Articles)
+   ============================================================ */
+h1 {
+    /* Box Model */
+    width: 86%;
+    margin-top: 140px; 
+    margin-left: 14%; 
+    padding: 25px 0;
+    
+    /* Typography */
+    text-align: center;
+}
+
+#container {
+    /* Box Model */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 86%;
+    margin-left: 14%; 
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+#container article {
+    /* Box Model */
+    flex: 0 0 300px;
+    margin: 10px;
+    padding: 0 15px;
+    
+    /* Special Navigation Property */
+    scroll-margin-top: 180px; 
+}
+
+/* ============================================================
+   5. UTILITY WIDGETS (Thank You Box)
+   ============================================================ */
+#thanks {
+    /* Position */
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    
+    /* Box Model */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    min-height: 50px;
+    margin: 0;
+    padding: 10px;
+    
+    /* Visuals */
+    background-color: rgb(0, 200, 255);
+    border: 2px solid black;
+    
+    /* Typography */
+    color: black;
+    font-size: 24px;
+    text-align: center;
+}
