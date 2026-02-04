@@ -150,6 +150,19 @@ h1 {
     scroll-margin-top: 180px; 
 }
 
+footer {
+    /* Box Model */
+    width: 60%;          /* Reduced from 86% */
+    margin-left: 27%;    /* Adjusted to keep it centered (14% sidebar + 13% offset) */
+    margin-right: auto;
+    margin-bottom: 10%;
+    padding: 20px 0;     /* Slightly tighter padding */
+
+    /* Typography */
+    text-align: center;
+    font-size: 0.9rem;   /* Smaller text for a footer feel */
+}
+
 /* ============================================================
    5. UTILITY WIDGETS (Thank You Box)
    ============================================================ */
